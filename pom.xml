@@ -33,7 +33,7 @@
       <configuration>
         <archive>
           <manifest>
-          <addClassPath> true</addClassPath>
+          
           <mainClass> com.example.App </mainClass>
           </manifest>        
         </archive>
