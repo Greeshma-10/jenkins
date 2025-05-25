@@ -16,14 +16,29 @@
     </dependency>
   </dependencies>
   <build>
-  <plugins>
+  <pluginManagement>
+    <plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>2.22.2</version>
+      <artifactId>maven-compile-plugin</artifactId>
+      <version>3.0.22</version>
       <configuration>
-        <redirectTestOutputToFile>false</redirectTestOutputToFile>
-        <useSystemOut>true</useSystemOut>
+        <source>1.8</source>
+        <target>1.8</target>
+      </configuration>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.2.2</version>
+      <configuration>
+        <archive>
+          <manifest>
+          <addClassPath> true</addClassPath>
+          <mainClass> com.example.App </mainClass>
+          </manifest>        
+        </archive>
+      
       </configuration>
     </plugin>
   </plugins>
